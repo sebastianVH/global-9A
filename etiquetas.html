@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas (TAGS) en HTML</title>
+</head>
+<body>
+    <!-- LISTAS: Ordenadas o desordenadas -->
+    <!-- desordenada: atributos necesarios para entrar a la fiesta de cumpleaños -->
+    <h3>Lista desordenada: </h3>
+    <ul> <!-- ul: referencia a que vamos a crear una LISTA DESORDENADA-->
+        <li>Llegar antes de las 20:00 hrs</li>
+        <li>El ingreso es unicamente por la entrada principal</li>
+        <li>Venir de traje</li>
+        <li>No dejar los vehiculos en la puerta</li>
+    </ul>
+    <hr>
+    <h3>Lista ordenada: </h3>
+    <ol>
+        <li>Avance 2km por la avenida hasta el corte</li>
+        <li> Doble a la derecha y siga 3 cuadras</li>
+        <li> Al llegar a la esquina, doble a la izquierda y avance media cuadra</li>
+        <li>Toque timbre en el edificio que se encuentra al lado de la floreria</li>
+    </ol>
+        
+        <h5>En caso que no encuentre a nadie, dirijase a nuestro otro local siguiendo estos pasos</h5>
+    <ol start="5" >  
+        <li>Caminar 6 cuadras</li>
+        <li>doblar a la derecha</li>
+        <li>Puerta azul con un grafitti</li>
+    </ol>   
+    <hr>
+    <h3>Span</h3>
+    <!-- es una etiqueta que actua para poder darle luego algun estilo. Por si misma NO CAMBIA NADA EN EL HTML -->
+    <style> span {color: rgb(255, 0, 0);} </style>
+    <p>Un texto con un <span>span</span> </p>
+    <h2>Titulo con un <span>span</span> </h2>
+    <hr>
+    <h3>TABLA</h3>
+    <!-- se compone de 3 partes: head, body, footer -->
+    <h4>Empleados</h4>
+    <table> <!--etiqueta para indicar que contendra una TABLA-->
+        <thead>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Sector</th>
+        </thead>
+        <tbody>
+            <tr> <!-- tr: representa UNA FILA-->
+                <td>1</td> <!-- td: representa UNA CELDA-->
+                <td>Seba</td>
+                <td>Tesoreria</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mariela</td>
+                <td>Administracion</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Sector</th>
+        </tfoot>
+    </table>
+    <hr>
+    <h3>Formulario</h3>
+    <h4>LOGIN DE USUARIO</h4>
+    <form action=""> <!-- Eitqueta para crear un formulario-->
+        <label for="user">Usuario</label> <!-- es una etiqueta SEMANTICA (representa algo LOGICO)-->
+        <!-- type: me permite utilizar un ESTILO de input -->
+        <input type="text" name="user"><br> 
+        <label for="pass">Contraseña</label>
+        <!-- input: etiquetas para tomar datos del usuario -->
+        <input type="password" name="pass"><br>
+        <!-- button: esta etiqueta funciona como un boton generico, el cual puede tomar diferentes acciones -->
+        <button>Ingresar</button>
+    </form>
+
+</body>
+</html>
