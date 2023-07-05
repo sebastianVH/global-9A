@@ -1,0 +1,57 @@
+/* div{
+    background-color: aqua;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+} */
+
+/* Display es la manera en la cual se van a mostrar los elementos CONTENEDORES o tags, dentro de HTML. el atributo, se llama DISPLAY */
+
+#elemento1{
+    /* none*/
+    display: none; /* el elemento se mantendra OCULTO*/
+}
+
+#elemento2{
+    /* provee al elemento, la capacidad de disminuir o agrandar el tamaño, dependiendo el contenido*/
+    display: inline-block;
+}
+
+#input1{
+    /* nos permite que el elemento ocupe TODA LA LINEA del HTML*/
+    display: block;
+}
+
+
+#elemento3{
+    /* nos mantiene el contenido detro, pero al salir del margen, los envia hacia abajo*/
+    display: inline;
+}
+#elemento4{
+    /* el elemento ocupa un espacio, y si otro elemento intenta ocupar el miso, hara que el que contenga esta propiedad, se desplaze*/
+    display: inline-block;
+}
+
+/* display del tipo flex y grid: nos permite tener un ORDENAMIENTO, SOBRE NUESTROS ELEMENTOS*/
+
+.divFlex{
+    border: 1px solid black;
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    text-align: center;
+}
+
+.flexClass{
+    /**/
+    height: 500px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap; /* los elementos achiquen su tamaño, o se acomoden en una posicion diferente , sin afectar su medida*/
+    gap: 10vh;
+    align-items: end;
+    align-content: center;
+    justify-content: stretch;
+}
