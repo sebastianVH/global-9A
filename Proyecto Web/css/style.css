@@ -1,0 +1,266 @@
+/* Variables, parametros y configuraciones globales*/
+/* variables ROOT: crear variables con contenido para utilizar dentro de nuestro CSS. Por ejemplo, elegir colores predeterminados que vamos a utilizar
+, fuentes que seran de nuestros textos, colores de fondo, etc.
+*/
+
+:root{
+    /*variable para almacenar colores de nuestra pagina*/
+    --colorFondo: #a04bfa;
+    --colorPrimaro: #815313;
+    --gris: #a7a5a5;
+    --blanco: white;
+    --negro: black;
+
+    /* usar fuentes*/
+    --fuenteTitulos: 'Anuphan', sans-serif;
+    --fuenteTextos: 'Alata', sans-serif;
+}
+
+html{
+    /* el margin y padding no afecte a los elementos nuevos: no genere espacios blancos innecesarios*/
+    box-sizing: border-box;
+    /* font-size: tamaño base del texto*/
+    font-size: 62.5%; /* 10px = 1rem */
+}
+
+body{
+    font-family: var(--fuenteTextos);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+/*Variable Globales*/
+
+.contenedor{
+    width: min(90%,120rem);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4 {
+    font-family: var(--fuenteTitulos);
+    color: var(--blanco);
+    -webkit-text-stroke: 1px var(--negro);
+    line-height: 1.2;
+}
+/* luego de elegir el tamaño, decrecer en 0.8rem sobre cada h siguiente
+la escala puede ser la que mas les guste, pero respeten el mismo nivel de decrecimiento
+en este ejemplo, vemos con 
+*/
+
+h1{
+    font-size: 4.8rem;
+}
+
+
+h2{
+    font-size: 4.2rem;
+}
+
+h3{
+   font-size: 3.6rem;
+}
+
+h4{
+    font-size: 3rem;
+}
+
+/*utilidades: son clases que daran algun estilo para utilizar en contenedores/elementos/ etc*/
+
+.no-margin{
+    /*quitamos margen entre elementos*/
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+/*Header*/
+
+.header{
+    /*podemos utilizar la prop background-image*/
+    background-image: url(../img/1banner.jpg) ;
+    height: 60rem;
+    background-position: center center; /*centrar la imagen*/
+    background-repeat: no-repeat; /*que no haya multiples imagenes*/
+    background-size: cover; /* rellenar un contenedor con una imagen*/
+}
+
+.barra{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.nav-enlaces{
+    color: var(--blanco);
+    font-size: 2.2rem;
+}
+
+.header-descripcion{
+    color: var(--blanco);
+    margin-top: 12rem;
+}
+
+.footer{
+    background-color: var(--negro);
+}
+
+/*Main*/
+
+.imagen-blog{
+    width: 55rem;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    transform: translateX(-50px);
+}
+
+.boton{
+    display: inline-block;
+    color: var(--blanco);
+    font-size: 2.2rem;
+    padding: 1rem 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.boton-primario{
+    background-color: var(--negro);
+}
+
+.boton-secundario{
+    background-color: var(--colorFondo);
+}
+
+.entrada{
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--gris);
+}
+
+.entrada:last-of-type{ /*afecto al ultimo elemento que se encuentre en mi documento, que contenga esa clase*/
+    border: none;
+    margin-bottom: 0;
+}
+
+.cursos{
+    list-style: none;
+}
+
+.elemento-curso{
+    border-bottom: 1px solid var(--gris);
+}
+
+.elemento-curso:last-of-type{
+    border: none;
+}
+
+.texto-bold{
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.texto-normal{
+    font-weight:200;
+}
+
+.contenido-main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 3.5rem;
+}
+
+/*Sobre nosotros*/
+
+.img-nosotros{
+    width: 60rem;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+}
+
+.sobre-nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* cursos */
+
+.curso-imagen{
+    max-width: 35rem;
+  
+}
+
+.curso{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+
+.curso:last-of-type{
+    border: none;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+/*Contacto */
+.bg-contacto{
+    background-image: url(../img/1contacto.jpg);
+    height: 50vh; /*viewport height / viewport width => toman el tamaño PORCENTUAL SOBRE EL tamaño del documento*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; /*centrar la imagen*/
+}
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 4rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo_label{
+    flex: 0 0 12rem;
+    padding-right: 2rem;
+}
+
+.campo_input{
+    flex: 1;
+    border: 1px solid var(--negro);
+    border-radius: 5px;
+    padding: 0.5rem 1rem ;
+}
+
+.campo_textarea{
+    height: 20rem;
+}

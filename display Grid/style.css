@@ -1,0 +1,95 @@
+.grid{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;/*  me indica la cantidad de columnas, y que espacio van a ocupar*/
+    /*grid-template-rows: 1fr 1fr; me indica la cantidad de filas y el espacio que va a ocupar*/
+    grid-gap: 1vw;
+}
+
+
+.gridContent{
+    background-color: aqua;
+    padding: 15px 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* Grid template*/
+
+.grid-template{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav nav "
+    "main aside"
+    "footer footer";
+    grid-template-columns:75% 1fr;
+    grid-template-rows:15% 10% 1fr 15%;
+    height: 65vh;
+}
+
+.header, .main, .aside, .nav, .footer{
+    background-color: chartreuse;
+    padding: 15px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#Header-div{
+    grid-area: header;
+}
+
+#Main-div{
+    grid-area: main ;
+
+}
+
+#Nav-div{
+    grid-area: nav;
+
+}
+
+#Aside-div{ 
+    grid-area: aside;
+}
+
+#Footer-div{
+    grid-area: footer ;
+    grid-row-start:2 ;
+    grid-column-start: 2;
+    grid-row-end:4;
+    grid-column-end: 2;
+
+}
+
+.divsMain{
+    border: 1px solid black;
+    background-color: azure;
+}
+.contenedores-main-fill{
+    border: 1px solid black;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-gap: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.contenedores-main-fit{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    background-color: rgb(92, 179, 255);
+    border: 1px solid black;
+    grid-gap: 5px;
+    padding: 5px;
+}
+
+.grid-explicito{
+    border: 1px solid black;
+    background-color: aqua;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 150px;
+    grid-auto-flow: column; /* la direccion de la creacion de elementos nuevos*/
+    gap: 10px;
+}

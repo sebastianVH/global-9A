@@ -1,0 +1,75 @@
+html{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aqua;
+}
+
+*,*::after,*::before{
+    box-sizing: inherit;
+    margin: 0 auto;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    font-size: 2.3rem;
+}
+
+.container{
+    background-color: rgb(246, 26, 254);
+    border: 2px solid black;
+}
+
+.container-flex{
+    border: 1px solid gray;
+    padding: 10px;
+    min-height: 800px;
+    background-color: aquamarine;
+    display: flex;
+    /*flex-wrap: si los elementos se achican o si se mueven, dentro del contenedor*/
+    flex-wrap: wrap;
+    /*gap hace referencia a la separacion ENTRE ELEMENTOS DEL DISPLAY*/
+    gap: 5px;
+    /* flex-direction: me permite decidir si vamos a utilizar FILAS o COLUMNAS*/
+    /*justify content y align content para alinear mis contenidos*/
+    align-content: flex-start;
+}
+
+.elementos{
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    border: 2px solid black;
+    text-align: center;
+    max-width: 300px;
+    padding: 10px 5px;
+}
+
+.tituloPagina{
+    text-align: center;
+    font-size: 80px;
+}
+
+.img-card{
+    width: 90%;
+    border-radius: 15px;
+    aspect-ratio: 16/9 ;
+    object-fit: contain;
+}
+
+.textosParrafo{
+    font-size: 1.5rem;
+}
+
+.textosTitulos{
+    font-size: 3.5rem;
+}
